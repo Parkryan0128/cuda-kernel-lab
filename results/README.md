@@ -12,4 +12,6 @@ Each benchmark case has 30 raw samples. `samples.csv` is immutable recorded data
 
 Source snapshots were built and measured locally, then uploaded through the authenticated GitHub connector. That creates different commit metadata while preserving the exact Git source trees. [`provenance.json`](provenance.json) maps local measured commits to their published equivalents and records matching tree hashes. Raw metadata retains the original local build commit instead of being rewritten after publication.
 
+After publication, CMake was updated to discover the CUDA 13 CCCL include directory for the host-compiled benchmark metadata code. This build-portability correction does not change kernels or timing logic. The recorded measurements still refer to the immutable snapshots above; a fresh build records its own commit and source digest.
+
 The [reproduction guide](../docs/reproduction.md) defines the environment, scopes, and limitations. The [case studies](../docs/case-studies/reduction.md) interpret this evidence without treating profiler timing as unprofiled performance.

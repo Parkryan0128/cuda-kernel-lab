@@ -27,7 +27,13 @@ endif()
 
 add_executable(cuda_lab_bench bench/main.cpp bench/benchmark.cpp)
 target_link_libraries(cuda_lab_bench PRIVATE cuda_lab)
-target_include_directories(cuda_lab_bench PRIVATE bench)
+# CUDA 13 packages CCCL under include/cccl on Linux. nvcc adds that
+# directory itself, but the host-only metadata code also reads CUB_VERSION.
+find_path(CUDA_LAB_CCCL_INCLUDE_DIR cub/version.cuh
+  HINTS ${CUDAToolkit_INCLUDE_DIRS}
+  PATH_SUFFIXES cccl
+  REQUIRED)
+target_include_directories(cuda_lab_bench PRIVATE bench "${CUDA_LAB_CCCL_INCLUDE_DIR}")
 
 include(CTest)
 if(BUILD_TESTING)

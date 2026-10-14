@@ -39,6 +39,8 @@ python tests/test_results.py
 
 On Linux with a compatible Toolkit/compiler, omit the Windows-specific `CMAKE_CUDA_FLAGS` option and use the executables without `.exe`. Architecture 89 matches the measured GPU; override it for another supported GPU and treat its measurements as a separate campaign. No other GPU has been validated here.
 
+CMake explicitly locates `cub/version.cuh` for the host-compiled benchmark code, accepting both the flat redistribution layout and CUDA 13's `include/cccl` layout. NVCC adds the latter automatically, but ordinary C++ compilers do not; see NVIDIA's [CCCL 3.0 migration guide](https://nvidia.github.io/cccl/unstable/cccl/3.0_migration_guide.html).
+
 CMake downloads GoogleTest 1.17.0 with an SHA256 check. For an offline build, download and verify that archive separately, extract it, and provide `-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/absolute/path/to/googletest-1.17.0`. This override was needed in the recorded Windows sandbox because CMake's Schannel backend could not initialize credentials; Python downloaded the same verified archive. TLS verification was not disabled.
 
 Run the full GPU validation campaign into a **new** directory:
