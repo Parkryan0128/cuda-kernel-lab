@@ -1,0 +1,16 @@
+name: Build and host checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  cuda-build:
+    runs-on: ubuntu-24.04
+    container: nvidia/cuda:13.0.2-devel-ubuntu24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install build tools
+        run: apt-get update && apt-get install -y --no-install-recommends cmake ninja-build g++ python3 git ca-certificates
+      - name: Configure and compile CUDA (no GPU execution)
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=89 && cmake --build build -j2
+      - name: Check result parsing on the CPU
+        run: python3 tests/test_results.py

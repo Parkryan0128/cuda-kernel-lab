@@ -16,11 +16,15 @@ inline std::vector<ReductionCase> reduction_configs() {
                       {ReduceVariant::r2,block,accumulators,multiplier * device_properties().multiProcessorCount}});
   return result;
 }
-struct GemmCase { std::string name; GemmConfig config; bool blas = false; bool fused = false; };
+struct GemmCase { std::string name; GemmConfig config; bool blas = false; bool fused = false; bool epilogue = false; };
 inline std::vector<GemmCase> gemm_configs() {
   std::vector<GemmCase> result = {{"g0", {}}, {"g1", {GemmVariant::g1,16,16,16}}, {"cublas", {}, true}};
-  for (const auto& tile : std::vector<GemmConfig>{{GemmVariant::g2,64,64,16},{GemmVariant::g2,64,64,32},{GemmVariant::g2,64,128,16}})
+  for (const auto& tile : std::vector<GemmConfig>{{GemmVariant::g2,64,64,16},{GemmVariant::g2,64,64,32},{GemmVariant::g2,64,128,16}}) {
     result.push_back({"g2_" + std::to_string(tile.bm) + "x" + std::to_string(tile.bn) + "x" + std::to_string(tile.bk), tile});
+    result.push_back({"fused_" + std::to_string(tile.bm) + "x" + std::to_string(tile.bn) + "x" + std::to_string(tile.bk), tile, false, true});
+    result.push_back({"unfused_" + std::to_string(tile.bm) + "x" + std::to_string(tile.bn) + "x" + std::to_string(tile.bk), tile, false, false, true});
+  }
+  result.push_back({"library_bias_relu", {}, true, false, true});
   return result;
 }
 template<class T> void upload(const std::vector<T>& source, DeviceBuffer<T>& target, cudaStream_t stream) {

@@ -1,6 +1,7 @@
 #include "benchmark.hpp"
 #include "cuda_lab/cuda_check.hpp"
 #include "cuda_lab/reference.hpp"
+#include "cuda_lab/build_info.hpp"
 #include <cub/version.cuh>
 #include <nvtx3/nvToolsExt.h>
 #include <algorithm>
@@ -246,7 +247,10 @@ int run(const Options& o) {
   CUDA_LAB_CHECK(cudaRuntimeGetVersion(&runtime)); CUDA_LAB_CHECK(cudaDriverGetVersion(&driver));
   Stream info_stream; BlasHandle info_blas(info_stream);
   std::ofstream metadata(directory / "metadata.json");
-  metadata << "{\n\"run_id\":" << quote(id) << ",\n\"gpu\":" << quote(p.name) << ",\n\"compute_capability\":" << quote(std::to_string(p.major) + "." + std::to_string(p.minor))
+  metadata << "{\n\"run_id\":" << quote(id) << ",\n\"build_commit\":" << quote(build_commit) << ",\n\"build_type\":" << quote(build_type)
+      << ",\n\"cuda_compiler\":" << quote(build_cuda_compiler) << ",\n\"host_compiler\":" << quote(build_host_compiler)
+      << ",\n\"cuda_architectures\":" << quote(build_architectures) << ",\n\"cuda_flags\":" << quote(build_cuda_flags)
+      << ",\n\"gpu\":" << quote(p.name) << ",\n\"compute_capability\":" << quote(std::to_string(p.major) + "." + std::to_string(p.minor))
       << ",\n\"sm_count\":" << p.multiProcessorCount << ",\n\"l2_bytes\":" << p.l2CacheSize << ",\n\"vram_bytes\":" << p.totalGlobalMem
       << ",\n\"cuda_runtime\":" << runtime << ",\n\"driver_api_version\":" << driver << ",\n\"cuda_header_version\":" << CUDART_VERSION
       << ",\n\"cub_version\":" << CUB_VERSION << ",\n\"cublas_version\":" << info_blas.version()

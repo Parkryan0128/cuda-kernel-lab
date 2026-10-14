@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+*.ncu-rep binary
+*.nsys-rep binary

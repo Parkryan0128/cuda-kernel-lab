@@ -11,8 +11,8 @@ struct Options {
   int samples = 30, warmup = 10, max_repetitions = 10000;
   double target_ms = 20;
   unsigned seed = 2027;
-  int block = 256, accumulators = 4, grid_multiplier = 8;
-  int bm = 64, bn = 64, bk = 16;
+  int block = 128, accumulators = 4, grid_multiplier = 4;
+  int bm = 64, bn = 64, bk = 32;
   bool profile_once = false;
 };
 struct Shape { size_t elements = 0; int m = 0, n = 0, k = 0; };

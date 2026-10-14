@@ -1,0 +1,9 @@
+#pragma once
+namespace cuda_lab {
+inline constexpr const char* build_commit = "@LAB_GIT_COMMIT@";
+inline constexpr const char* build_type = "@CMAKE_BUILD_TYPE@";
+inline constexpr const char* build_cuda_compiler = "@CMAKE_CUDA_COMPILER_ID@ @CMAKE_CUDA_COMPILER_VERSION@";
+inline constexpr const char* build_host_compiler = "@CMAKE_CXX_COMPILER_ID@ @CMAKE_CXX_COMPILER_VERSION@";
+inline constexpr const char* build_architectures = "@CMAKE_CUDA_ARCHITECTURES@";
+inline constexpr const char* build_cuda_flags = R"flags(@CMAKE_CUDA_FLAGS@ -lineinfo --ptxas-options=-v)flags";
+}

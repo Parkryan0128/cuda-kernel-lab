@@ -116,8 +116,8 @@ void gemm(const float* a, const float* b, float* c, int m, int n, int k,
           cudaStream_t stream, const GemmConfig& config) {
   launch<false>(a, b, nullptr, c, m, n, k, stream, config);
 }
-void gemm_bias_relu(const float*, const float*, const float*, float*, int, int, int,
-                    cudaStream_t, const GemmConfig&) {
-  throw std::invalid_argument("fused G2 is not available in the baseline build");
+void gemm_bias_relu(const float* a, const float* b, const float* bias, float* y, int m, int n, int k,
+                    cudaStream_t stream, const GemmConfig& config) {
+  launch<true>(a, b, bias, y, m, n, k, stream, config);
 }
 }
