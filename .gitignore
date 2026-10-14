@@ -1,0 +1,13 @@
+/build*/
+/.cache/
+/profiles/*.ncu-rep
+/profiles/*.nsys-rep
+/profiles/*.sqlite
+/results/local*/
+__pycache__/
+*.pyc
+*.obj
+*.exe
+*.pdb
+*.ilk
+.venv/

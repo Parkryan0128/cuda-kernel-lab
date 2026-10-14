@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "configurePresets": [{"name": "release", "generator": "Ninja", "binaryDir": "${sourceDir}/build", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release", "CMAKE_CUDA_ARCHITECTURES": "89", "BUILD_TESTING": "ON"}}],
+  "buildPresets": [{"name": "release", "configurePreset": "release"}],
+  "testPresets": [{"name": "release", "configurePreset": "release", "output": {"outputOnFailure": true}}]
+}
