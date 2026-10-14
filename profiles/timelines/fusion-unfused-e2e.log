@@ -1,0 +1,7 @@
+Capture range started in the application.
+Capture range ended in the application.
+Generating 'C:\Users\vazyw\AppData\Local\Temp\nsys-report-a846.qdstrm'
+[1/1] [0%                          ] fusion-unfused-e2e.nsys-repProcessing events...
+[1/1] [0%                          ] fusion-unfused-e2e.nsys-rep[1/1] [==========47%               ] fusion-unfused-e2e.nsys-rep[1/1] [==========48%               ] fusion-unfused-e2e.nsys-rep[1/1] [===========50%              ] fusion-unfused-e2e.nsys-rep[1/1] [========================100%] fusion-unfused-e2e.nsys-rep[1/1] [========================100%] fusion-unfused-e2e.nsys-rep
+Generated:
+	C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\profiles\timelines\fusion-unfused-e2e.nsys-rep

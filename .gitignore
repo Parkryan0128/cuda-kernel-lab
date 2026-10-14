@@ -1,8 +1,8 @@
 /build*/
 /.cache/
-/profiles/*.ncu-rep
-/profiles/*.nsys-rep
-/profiles/*.sqlite
+*.ncu-rep
+*.nsys-rep
+*.sqlite
 /results/local*/
 __pycache__/
 *.pyc

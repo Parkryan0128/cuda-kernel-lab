@@ -1,0 +1,10 @@
+==WARNING== Could not deploy stock section files to "C:\Users\vazyw\Documents/NVIDIA Nsight Compute/2025.3.1/Sections".
+Set the HOME environment variable to a writable directory.
+==WARNING== Using "C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\work\toolchains\nsight_compute\nsight-compute\2025.3.1\target\windows-desktop-win7-x64\..\..\sections" instead.
+==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 32468 (C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\build\cuda_lab_bench.exe)
+gemm/g2/device/1024x1024x1024
+==PROF== Profiling "gemm_g2" - 0: 0%....50%....100% - 17 passes
+==PROF== Disconnected from process 32468
+==PROF== Report: C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\profiles\detail\gemm-g2-bk16.ncu-rep

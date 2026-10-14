@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_bench.exe",
+    "--op",
+    "gemm",
+    "--variant",
+    "g2",
+    "--suite",
+    "representative",
+    "--mode",
+    "device",
+    "--output",
+    "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\release\\repeat3-gemm-g2-device"
+  ],
+  "started_utc": "2026-10-14T06:07:18.256504+00:00",
+  "before": "name, driver_version, pstate, temperature.gpu, power.draw [W], power.limit [W], clocks.current.sm [MHz], clocks.current.memory [MHz], utilization.gpu [%], memory.used [MiB]\nNVIDIA GeForce RTX 4070 SUPER, 596.36, P2, 46, 94.91 W, 220.00 W, 2850 MHz, 10251 MHz, 100 %, 912 MiB",
+  "exit_code": 0,
+  "ended_utc": "2026-10-14T06:07:19.755106+00:00",
+  "after": "name, driver_version, pstate, temperature.gpu, power.draw [W], power.limit [W], clocks.current.sm [MHz], clocks.current.memory [MHz], utilization.gpu [%], memory.used [MiB]\nNVIDIA GeForce RTX 4070 SUPER, 596.36, P2, 58, 126.14 W, 220.00 W, 2730 MHz, 10251 MHz, 100 %, 901 MiB"
+}

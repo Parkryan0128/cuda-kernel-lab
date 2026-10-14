@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_bench.exe",
+    "--op",
+    "fusion",
+    "--variant",
+    "unfused",
+    "--suite",
+    "representative",
+    "--mode",
+    "device",
+    "--output",
+    "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\release\\repeat3-fusion-unfused-device"
+  ],
+  "started_utc": "2026-10-14T06:07:21.280757+00:00",
+  "before": "name, driver_version, pstate, temperature.gpu, power.draw [W], power.limit [W], clocks.current.sm [MHz], clocks.current.memory [MHz], utilization.gpu [%], memory.used [MiB]\nNVIDIA GeForce RTX 4070 SUPER, 596.36, P2, 58, 136.57 W, 220.00 W, 2310 MHz, 10251 MHz, 100 %, 912 MiB",
+  "exit_code": 0,
+  "ended_utc": "2026-10-14T06:07:23.452559+00:00",
+  "after": "name, driver_version, pstate, temperature.gpu, power.draw [W], power.limit [W], clocks.current.sm [MHz], clocks.current.memory [MHz], utilization.gpu [%], memory.used [MiB]\nNVIDIA GeForce RTX 4070 SUPER, 596.36, P0, 48, 198.05 W, 220.00 W, 2790 MHz, 10501 MHz, 71 %, 901 MiB"
+}

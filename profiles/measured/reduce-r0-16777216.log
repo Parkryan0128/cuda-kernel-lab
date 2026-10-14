@@ -1,0 +1,12 @@
+==WARNING== Could not deploy stock section files to "C:\Users\vazyw\Documents/NVIDIA Nsight Compute/2025.3.1/Sections".
+Set the HOME environment variable to a writable directory.
+==WARNING== Using "C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\work\toolchains\nsight_compute\nsight-compute\2025.3.1\target\windows-desktop-win7-x64\..\..\sections" instead.
+==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 27556 (C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\build\cuda_lab_bench.exe)
+reduce/r0/device/16777216
+==PROF== Profiling "reduction_r0" - 0: 0%....50%....100% - 17 passes
+==PROF== Profiling "reduction_r0" - 1: 0%....50%....100% - 17 passes
+==PROF== Profiling "reduction_r0" - 2: 0%....50%....100% - 17 passes
+==PROF== Disconnected from process 27556
+==PROF== Report: C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\profiles\measured\reduce-r0-16777216.ncu-rep

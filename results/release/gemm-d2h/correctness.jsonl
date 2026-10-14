@@ -1,0 +1,4 @@
+{"case":"gemm/g2/d2h/128x128x128","phase":"before","passed":true,"scope":"full_cpu_fp64","compared_values":32768,"fp64_output_samples":16384,"max_abs_error":5.6385983811e-06,"max_normalized_error":0.0289440238235}
+{"case":"gemm/g2/d2h/128x128x128","phase":"after","passed":true,"scope":"full_cpu_fp64","compared_values":32768,"fp64_output_samples":16384,"max_abs_error":5.6385983811e-06,"max_normalized_error":0.0289440238235}
+{"case":"gemm/g2/d2h/1024x1024x1024","phase":"before","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":1048832,"fp64_output_samples":128,"max_abs_error":6.86645507812e-05,"max_normalized_error":0.117666507587}
+{"case":"gemm/g2/d2h/1024x1024x1024","phase":"after","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":1048832,"fp64_output_samples":128,"max_abs_error":6.86645507812e-05,"max_normalized_error":0.117666507587}

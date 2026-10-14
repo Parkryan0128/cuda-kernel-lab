@@ -2,3 +2,6 @@
 *.png binary
 *.ncu-rep binary
 *.nsys-rep binary
+# Preserve tool output verbatim, including progress bars and table padding.
+*.log -whitespace
+docs/figures/*.svg -whitespace

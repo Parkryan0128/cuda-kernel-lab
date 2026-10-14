@@ -1,0 +1,2 @@
+{"case":"reduce/r2/device/1024","phase":"before","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":7.15255737305e-07,"max_normalized_error":0.000271170700178}
+{"case":"reduce/r2/device/1024","phase":"after","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":7.15255737305e-07,"max_normalized_error":0.000271170700178}

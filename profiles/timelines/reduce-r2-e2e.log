@@ -1,0 +1,7 @@
+Capture range started in the application.
+Capture range ended in the application.
+Generating 'C:\Users\vazyw\AppData\Local\Temp\nsys-report-da3e.qdstrm'
+[1/1] [0%                          ] reduce-r2-e2e.nsys-repProcessing events...
+[1/1] [0%                          ] reduce-r2-e2e.nsys-rep[1/1] [=========46%                ] reduce-r2-e2e.nsys-rep[1/1] [==========47%               ] reduce-r2-e2e.nsys-rep[1/1] [===========50%              ] reduce-r2-e2e.nsys-rep[1/1] [========================100%] reduce-r2-e2e.nsys-rep[1/1] [========================100%] reduce-r2-e2e.nsys-rep
+Generated:
+	C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\profiles\timelines\reduce-r2-e2e.nsys-rep

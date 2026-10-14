@@ -1,0 +1,2 @@
+gemm/cublas/device/128x128x128
+gemm/cublas/device/1024x1024x1024

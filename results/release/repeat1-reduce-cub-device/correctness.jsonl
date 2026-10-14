@@ -1,0 +1,4 @@
+{"case":"reduce/cub/device/1024","phase":"before","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":1.19209289551e-06,"max_normalized_error":0.000451951166963}
+{"case":"reduce/cub/device/1024","phase":"after","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":1.19209289551e-06,"max_normalized_error":0.000451951166963}
+{"case":"reduce/cub/device/16777216","phase":"before","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":0.000138163566589,"max_normalized_error":3.29343005369e-06}
+{"case":"reduce/cub/device/16777216","phase":"after","passed":true,"scope":"full_cpu_fp64_sum","compared_values":1,"fp64_output_samples":0,"max_abs_error":0.000138163566589,"max_normalized_error":3.29343005369e-06}

@@ -1,0 +1,11 @@
+==WARNING== Could not deploy stock section files to "C:\Users\vazyw\Documents/NVIDIA Nsight Compute/2025.3.1/Sections".
+Set the HOME environment variable to a writable directory.
+==WARNING== Using "C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\work\toolchains\nsight_compute\nsight-compute\2025.3.1\target\windows-desktop-win7-x64\..\..\sections" instead.
+==WARNING== See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#faq.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 6872 (C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\build\cuda_lab_bench.exe)
+fusion/library/device/512x1024x128
+==PROF== Profiling "ampere_sgemm_128x32_nn" - 0: 0%....50%....100% - 17 passes
+==PROF== Profiling "epilogue" - 1: 0%....50%....100% - 17 passes
+==PROF== Disconnected from process 6872
+==PROF== Report: C:\Users\vazyw\Documents\Codex\2026-10-13\new-chat\outputs\cuda-kernel-lab\profiles\measured\fusion-library.ncu-rep

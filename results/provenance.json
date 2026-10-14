@@ -1,0 +1,17 @@
+{
+  "publication_note": "GitHub connector publication changes commit metadata; the matching Git tree hashes prove that the published snapshots contain the exact measured source. Raw run metadata preserves local commit identifiers.",
+  "tuning": {
+    "local_commit": "6b9668d2596c79667ef293d9ed3d87fbbf7bbf09",
+    "published_commit": "9769e71c2df290e4c8c91438b71ab866842d08a1",
+    "git_tree": "aa0de435658813efdeb8feecab60b6d0cea3e3e5",
+    "normalized_source_sha256": "2691c5a828084a89c32ff8dea445f2bd4fe50873bda3ce363b42ba4da1174f82"
+  },
+  "release_and_validation": {
+    "local_commit": "4e5e11755b1b8007c500b0f85a9d47eb929da36a",
+    "published_commit": "8e7f270e35006824f71b2492b5a4f0fe9fccc748",
+    "git_tree": "93e5ffb36b0977126ccb24da32cb62c306251113",
+    "normalized_source_sha256": "b55931efc82e4cf0f75e4cf67dbbce1d3711f27d3df4f9c370b6f55b2c3f9a03",
+    "benchmark_exe_sha256": "2c1b938fca110a006419461adca038f700af8721baa0dd4f885097db54bad743",
+    "test_exe_sha256": "1dbd008785781abd10c45f3a6a22c98cff7b7dc65a559c3034b862f7cb9b7e66"
+  }
+}

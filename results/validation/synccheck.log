@@ -1,0 +1,33 @@
+========= COMPUTE-SANITIZER
+GPU: NVIDIA GeForce RTX 4070 SUPER
+Note: Google Test filter = *Boundary.*
+[==========] Running 9 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from ReductionBoundary
+[ RUN      ] ReductionBoundary.SizesAndExactPatterns
+[       OK ] ReductionBoundary.SizesAndExactPatterns (443 ms)
+[ RUN      ] ReductionBoundary.RandomAndCancellation
+[       OK ] ReductionBoundary.RandomAndCancellation (104 ms)
+[ RUN      ] ReductionBoundary.GridStrideTransitions
+[       OK ] ReductionBoundary.GridStrideTransitions (85 ms)
+[ RUN      ] ReductionBoundary.ReusesBuffersWithChangedValuesAndSize
+[       OK ] ReductionBoundary.ReusesBuffersWithChangedValuesAndSize (22 ms)
+[ RUN      ] ReductionBoundary.RejectsInvalidArguments
+[       OK ] ReductionBoundary.RejectsInvalidArguments (0 ms)
+[----------] 5 tests from ReductionBoundary (655 ms total)
+
+[----------] 4 tests from GemmBoundary
+[ RUN      ] GemmBoundary.EmptyAndKTails
+[       OK ] GemmBoundary.EmptyAndKTails (310 ms)
+[ RUN      ] GemmBoundary.RandomScalesAndSeeds
+[       OK ] GemmBoundary.RandomScalesAndSeeds (222 ms)
+[ RUN      ] GemmBoundary.RejectsInvalidArguments
+[       OK ] GemmBoundary.RejectsInvalidArguments (0 ms)
+[ RUN      ] GemmBoundary.ExactIdentityZeroOneHotAndBufferReuse
+[       OK ] GemmBoundary.ExactIdentityZeroOneHotAndBufferReuse (62 ms)
+[----------] 4 tests from GemmBoundary (596 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 2 test suites ran. (1252 ms total)
+[  PASSED  ] 9 tests.
+========= ERROR SUMMARY: 0 errors

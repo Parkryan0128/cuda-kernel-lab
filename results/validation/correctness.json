@@ -1,0 +1,196 @@
+{
+  "tests": 13,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2026-10-13T23:03:29Z",
+  "time": "1.538s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Reference",
+      "tests": 2,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:29Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "DoubleBeforeMultiplication",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\cpu_reference.cpp",
+          "line": 3,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:29Z",
+          "time": "0s",
+          "classname": "Reference"
+        },
+        {
+          "name": "CancellationAndTolerance",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\cpu_reference.cpp",
+          "line": 7,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:29Z",
+          "time": "0s",
+          "classname": "Reference"
+        }
+      ]
+    },
+    {
+      "name": "ReductionBoundary",
+      "tests": 5,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:29Z",
+      "time": "0.406s",
+      "testsuite": [
+        {
+          "name": "SizesAndExactPatterns",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 21,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:29Z",
+          "time": "0.286s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "RandomAndCancellation",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 33,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0.061s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "GridStrideTransitions",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 41,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0.052s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "ReusesBuffersWithChangedValuesAndSize",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 52,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0.006s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "RejectsInvalidArguments",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 70,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0s",
+          "classname": "ReductionBoundary"
+        }
+      ]
+    },
+    {
+      "name": "ReductionLarge",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:30Z",
+      "time": "0.688s",
+      "testsuite": [
+        {
+          "name": "RandomTails",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 67,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0.688s",
+          "classname": "ReductionLarge"
+        }
+      ]
+    },
+    {
+      "name": "GemmBoundary",
+      "tests": 4,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:30Z",
+      "time": "0.424s",
+      "testsuite": [
+        {
+          "name": "EmptyAndKTails",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 32,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:30Z",
+          "time": "0.241s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "RandomScalesAndSeeds",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 39,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:31Z",
+          "time": "0.169s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "RejectsInvalidArguments",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 43,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:31Z",
+          "time": "0s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "ExactIdentityZeroOneHotAndBufferReuse",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 57,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:31Z",
+          "time": "0.013s",
+          "classname": "GemmBoundary"
+        }
+      ]
+    },
+    {
+      "name": "GemmLarge",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:31Z",
+      "time": "0.018s",
+      "testsuite": [
+        {
+          "name": "FullLibraryAndSampledDoubleReference",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 87,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:31Z",
+          "time": "0.018s",
+          "classname": "GemmLarge"
+        }
+      ]
+    }
+  ]
+}

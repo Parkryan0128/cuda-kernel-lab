@@ -1,0 +1,123 @@
+{
+  "tests": 9,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2026-10-13T23:03:33Z",
+  "time": "1.427s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ReductionBoundary",
+      "tests": 5,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:33Z",
+      "time": "0.695s",
+      "testsuite": [
+        {
+          "name": "SizesAndExactPatterns",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 21,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:33Z",
+          "time": "0.476s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "RandomAndCancellation",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 33,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.109s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "GridStrideTransitions",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 41,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.085s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "ReusesBuffersWithChangedValuesAndSize",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 52,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.023s",
+          "classname": "ReductionBoundary"
+        },
+        {
+          "name": "RejectsInvalidArguments",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_reduction.cpp",
+          "line": 70,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0s",
+          "classname": "ReductionBoundary"
+        }
+      ]
+    },
+    {
+      "name": "GemmBoundary",
+      "tests": 4,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-13T23:03:34Z",
+      "time": "0.731s",
+      "testsuite": [
+        {
+          "name": "EmptyAndKTails",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 32,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.372s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "RandomScalesAndSeeds",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 39,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.266s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "RejectsInvalidArguments",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 43,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0s",
+          "classname": "GemmBoundary"
+        },
+        {
+          "name": "ExactIdentityZeroOneHotAndBufferReuse",
+          "file": "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\tests\\test_gemm.cpp",
+          "line": 57,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-13T23:03:34Z",
+          "time": "0.091s",
+          "classname": "GemmBoundary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "tool": "correctness",
+    "command": [
+      "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_tests.exe",
+      "--gtest_output=json:C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\validation\\correctness.json"
+    ],
+    "started_utc": "2026-10-14T06:03:29.735517+00:00",
+    "exit_code": 0,
+    "tests": 13,
+    "passed": true
+  },
+  {
+    "tool": "memcheck",
+    "command": [
+      "compute-sanitizer",
+      "--tool",
+      "memcheck",
+      "--error-exitcode",
+      "1",
+      "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_tests.exe",
+      "--gtest_filter=*Boundary.*",
+      "--gtest_output=json:C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\validation\\memcheck-tests.json"
+    ],
+    "started_utc": "2026-10-14T06:03:31.490948+00:00",
+    "exit_code": 0,
+    "tests": 9,
+    "passed": true
+  },
+  {
+    "tool": "racecheck",
+    "command": [
+      "compute-sanitizer",
+      "--tool",
+      "racecheck",
+      "--error-exitcode",
+      "1",
+      "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_tests.exe",
+      "--gtest_filter=*Boundary.*",
+      "--gtest_output=json:C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\validation\\racecheck-tests.json"
+    ],
+    "started_utc": "2026-10-14T06:03:35.148053+00:00",
+    "exit_code": 0,
+    "tests": 9,
+    "passed": true
+  },
+  {
+    "tool": "initcheck",
+    "command": [
+      "compute-sanitizer",
+      "--tool",
+      "initcheck",
+      "--error-exitcode",
+      "1",
+      "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_tests.exe",
+      "--gtest_filter=*Boundary.*",
+      "--gtest_output=json:C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\validation\\initcheck-tests.json"
+    ],
+    "started_utc": "2026-10-14T06:05:19.679813+00:00",
+    "exit_code": 0,
+    "tests": 9,
+    "passed": true
+  },
+  {
+    "tool": "synccheck",
+    "command": [
+      "compute-sanitizer",
+      "--tool",
+      "synccheck",
+      "--error-exitcode",
+      "1",
+      "C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\build\\cuda_lab_tests.exe",
+      "--gtest_filter=*Boundary.*",
+      "--gtest_output=json:C:\\Users\\vazyw\\Documents\\Codex\\2026-10-13\\new-chat\\outputs\\cuda-kernel-lab\\results\\validation\\synccheck-tests.json"
+    ],
+    "started_utc": "2026-10-14T06:05:23.389808+00:00",
+    "exit_code": 0,
+    "tests": 9,
+    "passed": true
+  }
+]

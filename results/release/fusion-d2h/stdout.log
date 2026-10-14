@@ -1,0 +1,3 @@
+fusion/fused/d2h/128x512x64
+fusion/fused/d2h/512x1024x128
+fusion/fused/d2h/1024x1024x1024

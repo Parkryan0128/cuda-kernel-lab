@@ -1,0 +1,138 @@
+[1/13] Building CXX object CMakeFiles\cuda_lab_bench.dir\bench\main.cpp.obj
+[2/13] Building CXX object CMakeFiles\cuda_lab_tests.dir\tests\test_main.cpp.obj
+[3/13] Building CXX object CMakeFiles\cuda_lab_tests.dir\tests\cpu_reference.cpp.obj
+[4/13] Building CXX object CMakeFiles\cuda_lab_bench.dir\bench\benchmark.cpp.obj
+[5/13] Building CXX object CMakeFiles\cuda_lab_tests.dir\tests\test_reduction.cpp.obj
+[6/13] Building CUDA object CMakeFiles\cuda_lab.dir\src\epilogue.cu.obj
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN8cuda_lab44_GLOBAL__N__d299c9cb_11_epilogue_cu_919336dd8epilogueILb0EEEvPfPKfyi' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab44_GLOBAL__N__d299c9cb_11_epilogue_cu_919336dd8epilogueILb0EEEvPfPKfyi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers, 380 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab44_GLOBAL__N__d299c9cb_11_epilogue_cu_919336dd8epilogueILb1EEEvPfPKfyi' for 'sm_89'
+
+ptxas info    : Function properties for _ZN8cuda_lab44_GLOBAL__N__d299c9cb_11_epilogue_cu_919336dd8epilogueILb1EEEvPfPKfyi
+
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+
+ptxas info    : Used 20 registers, used 0 barriers, 380 bytes cmem[0]
+
+ptxas info    : Compile time = 0.000 ms
+
+epilogue.cu
+
+tmpxft_00001684_00000000-7_epilogue.cudafe1.cpp
+
+[7/13] Building CXX object CMakeFiles\cuda_lab_tests.dir\tests\test_gemm.cpp.obj
+[8/13] Building CUDA object CMakeFiles\cuda_lab.dir\src\reduction.cu.obj
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi256ELi4EEEvPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi256ELi4EEEvPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 1 barriers, 32 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi256ELi1EEEvPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi256ELi1EEEvPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 1 barriers, 32 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi128ELi4EEEvPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi128ELi4EEEvPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 1 barriers, 16 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi128ELi1EEEvPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r2ILi128ELi1EEEvPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 1 barriers, 16 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r0EPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r0EPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 1 barriers, 1024 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r1EPKfPfy' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab45_GLOBAL__N__6c46418b_12_reduction_cu_c6db23de12reduction_r1EPKfPfy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 1 barriers, 32 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+reduction.cu
+tmpxft_000067f0_00000000-7_reduction.cudafe1.cpp
+[9/13] Building CUDA object CMakeFiles\cuda_lab.dir\src\gemm.cu.obj
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi16ELb1EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi16ELb1EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 66 registers, used 1 barriers, 8192 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi32ELb1EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi32ELb1EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 1 barriers, 16384 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi128ELi16ELb1EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi128ELi16ELb1EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 12288 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi16ELb0EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi16ELb0EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 66 registers, used 1 barriers, 8192 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi32ELb0EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi64ELi32ELb0EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 1 barriers, 16384 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi128ELi16ELb0EEEvPKfS3_S3_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g2ILi64ELi128ELi16ELb0EEEvPKfS3_S3_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 12288 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g0EPKfS2_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g0EPKfS2_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers, 388 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g1EPKfS2_Pfiii' for 'sm_89'
+ptxas info    : Function properties for _ZN8cuda_lab39_GLOBAL__N__9ed849e6_7_gemm_cu_ca24bfee7gemm_g1EPKfS2_Pfiii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, used 1 barriers, 2048 bytes smem, 388 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+gemm.cu
+tmpxft_0000796c_00000000-7_gemm.cudafe1.cpp
+[10/13] Building CUDA object CMakeFiles\cuda_lab.dir\src\library_baselines.cu.obj
+ptxas info    : 40 bytes gmem, 320 bytes cmem[4]
+ptxas info    : Compiling entry function '_ZN3cub17CUB_300001_SM_8906detail6reduce28DeviceReduceSingleTileKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPfSC_iS9_ffNS7_10__identityEEEvT0_T1_T2_T3_T4_T6_' for 'sm_89'
+ptxas info    : Function properties for _ZN3cub17CUB_300001_SM_8906detail6reduce28DeviceReduceSingleTileKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPfSC_iS9_ffNS7_10__identityEEEvT0_T1_T2_T3_T4_T6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 1 barriers, 44 bytes smem, 381 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN3cub17CUB_300001_SM_8906detail6reduce18DeviceReduceKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPKfjS9_fNS7_10__identityEEEvT0_PT3_T1_NS0_13GridEvenShareISI_EET2_T4_' for 'sm_89'
+ptxas info    : Function properties for _ZN3cub17CUB_300001_SM_8906detail6reduce18DeviceReduceKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPKfjS9_fNS7_10__identityEEEvT0_PT3_T1_NS0_13GridEvenShareISI_EET2_T4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 44 bytes smem, 414 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN3cub17CUB_300001_SM_8906detail6reduce28DeviceReduceSingleTileKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPKfPfjS9_ffNS7_10__identityEEEvT0_T1_T2_T3_T4_T6_' for 'sm_89'
+ptxas info    : Function properties for _ZN3cub17CUB_300001_SM_8906detail6reduce28DeviceReduceSingleTileKernelINS2_10policy_hubIfjN4cuda3std3__44plusIvEEE10Policy1000EPKfPfjS9_ffNS7_10__identityEEEvT0_T1_T2_T3_T4_T6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 1 barriers, 44 bytes smem, 381 bytes cmem[0]
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN3cub17CUB_300001_SM_8906detail11EmptyKernelIvEEvv' for 'sm_89'
+ptxas info    : Function properties for _ZN3cub17CUB_300001_SM_8906detail11EmptyKernelIvEEvv
+
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+
+ptxas info    : Used 4 registers, used 0 barriers, 352 bytes cmem[0]
+
+ptxas info    : Compile time = 0.000 ms
+
+library_baselines.cu
+
+tmpxft_0000593c_00000000-7_library_baselines.cudafe1.cpp
+
+[11/13] Linking CUDA static library cuda_lab.lib
+[12/13] Linking CXX executable cuda_lab_bench.exe
+[13/13] Linking CXX executable cuda_lab_tests.exe

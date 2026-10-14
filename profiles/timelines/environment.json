@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-10-14T06:09:57.026409+00:00",
+  "git_commit": "4e5e11755b1b8007c500b0f85a9d47eb929da36a",
+  "git_dirty": false,
+  "source_sha256": "b55931efc82e4cf0f75e4cf67dbbce1d3711f27d3df4f9c370b6f55b2c3f9a03",
+  "os": "Windows-11-10.0.26200-SP0",
+  "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_13:58:20_Pacific_Daylight_Time_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0",
+  "host_compiler": "usage: cl [ option... ] filename... [ /link linkoption... ]\nMicrosoft (R) C/C++ Optimizing Compiler Version 19.39.33523 for x64\nCopyright (C) Microsoft Corporation.  All rights reserved.",
+  "cmake": "cmake version 3.31.6\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+  "ncu": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2025 NVIDIA Corporation\nVersion 2025.3.1.0 (build 36398880) (public-release)",
+  "nsys": "NVIDIA Nsight Systems version 2025.3.2.474-253236389321v0",
+  "cuda_environment_overrides": {},
+  "background_load_note": "Interactive Windows WDDM desktop; display and Codex active; clocks/power not locked. No concurrent benchmark processes started by this runner."
+}

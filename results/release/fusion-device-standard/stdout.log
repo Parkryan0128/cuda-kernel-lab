@@ -1,0 +1,9 @@
+fusion/unfused/device/128x512x64
+fusion/fused/device/128x512x64
+fusion/library/device/128x512x64
+fusion/unfused/device/512x1024x128
+fusion/fused/device/512x1024x128
+fusion/library/device/512x1024x128
+fusion/unfused/device/1024x1024x1024
+fusion/fused/device/1024x1024x1024
+fusion/library/device/1024x1024x1024

@@ -1,0 +1,2 @@
+{"case":"gemm/g2/device/257x509x127","phase":"before","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":131069,"fp64_output_samples":128,"max_abs_error":7.62939453125e-06,"max_normalized_error":0.0187743952583}
+{"case":"gemm/g2/device/257x509x127","phase":"after","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":131069,"fp64_output_samples":128,"max_abs_error":7.62939453125e-06,"max_normalized_error":0.0187743952583}

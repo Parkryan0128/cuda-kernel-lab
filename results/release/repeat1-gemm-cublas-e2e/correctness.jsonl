@@ -1,0 +1,4 @@
+{"case":"gemm/cublas/e2e/128x128x128","phase":"before","passed":true,"scope":"full_cpu_fp64","compared_values":32768,"fp64_output_samples":16384,"max_abs_error":1.63319059254e-06,"max_normalized_error":0.0118256874816}
+{"case":"gemm/cublas/e2e/128x128x128","phase":"after","passed":true,"scope":"full_cpu_fp64","compared_values":32768,"fp64_output_samples":16384,"max_abs_error":1.63319059254e-06,"max_normalized_error":0.0118256874816}
+{"case":"gemm/cublas/e2e/1024x1024x1024","phase":"before","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":1048832,"fp64_output_samples":128,"max_abs_error":6.66878084132e-06,"max_normalized_error":0.0369847204875}
+{"case":"gemm/cublas/e2e/1024x1024x1024","phase":"after","passed":true,"scope":"full_cublas_fp32_plus_sampled_cpu_fp64","compared_values":1048832,"fp64_output_samples":128,"max_abs_error":6.66878084132e-06,"max_normalized_error":0.0369847204875}

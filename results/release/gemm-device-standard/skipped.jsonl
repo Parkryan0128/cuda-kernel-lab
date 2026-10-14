@@ -1,0 +1,1 @@
+{"case":"gemm/g0/device/2048x2048x2048","reason":"G0 M*N*K > 1024^3 skip policy"}
