@@ -1,12 +1,12 @@
 # Reduction: fewer barriers and fewer partials
 
-**Result:** At 67,108,864 FP32 elements (256 MiB), R2 completes the full reduction in 588.50 µs versus R0's 831.07 µs: **1.41× faster than the shared-tree baseline**. At 16,777,216 elements, three independent processes put R2 and CUB near parity; there is no robust claim that this implementation beats CUB.
+At 67,108,864 FP32 elements (256 MiB), R2 completes the full reduction in 588.50 µs versus R0's 831.07 µs: **1.41× faster than the shared-tree baseline**. R2 reduces the number of partial sums and follow-up passes. At 16,777,216 elements, repeated measurements put it near parity with CUB.
 
-## Hypothesis and controlled changes
+## What changed
 
 R0 performs a shared-memory tree within each 256-thread block. R1 changes only that block reduction to warp shuffles and one shared-memory exchange, keeping the input partition and pass schedule unchanged. R2 then changes only the first pass to a bounded grid-stride loop with independent accumulators; its follow-up passes are R1.
 
-The expected benefit of R1 is less barrier/shared-memory work. R2 should reduce the number of partials and allow each block to process more input. It can still lose on tiny inputs because the fixed block size and final-pass overhead matter more than bandwidth.
+R1 reduces synchronization within a block. R2 processes more input per block and produces fewer partial sums. Tiny inputs can still be slower when R2 needs an extra pass.
 
 ## Unprofiled measurements
 
@@ -23,15 +23,15 @@ Device-stream medians in µs, including every pass, from [`reduce-device-standar
 
 ![Reduction measurements](../figures/reduction.png)
 
-R2 at 256 elements uses two 128-thread first-pass blocks plus a final block; R0/R1 finish with one 256-thread block. The slower R2 result is retained. No special tiny-input dispatch was added.
+R2 at 256 elements uses two 128-thread first-pass blocks plus a final block; R0/R1 finish with one 256-thread block. There is no special dispatch for tiny inputs.
 
 The input-processing rate rises above 1,000 GB/s for the 16 MiB input under warm-buffer repetition, then falls for inputs larger than the GPU's 48 MiB L2. This is an input-byte processing metric, not a claim of DRAM bandwidth. The graph marks where the input alone equals L2 capacity; other live buffers also use cache.
 
-## Bounded tuning decision
+## Choosing the grid
 
 Only 1,048,576 and 16,777,216 elements were tuning inputs. The eight candidates are recorded in [`results/tuning`](../../results/tuning/summary.json). R2 B128/A4/cap224 took 10.16/152.63 µs, and B256/A4/cap224 took 10.47/150.61 µs. The former has a slightly better two-shape geometric mean and was selected as the fixed default; these small differences do not establish a universal best setting.
 
-The 8×SM cap permits 448 first-pass partials on this GPU, so it needs an additional R1 pass compared with the 224-partial cap. The larger grid was often slower at the smaller tuning size. This explains a concrete full-operation tradeoff that a first-kernel-only timer would miss.
+The 8×SM cap permits 448 first-pass partials on this GPU, so it needs an additional R1 pass compared with the 224-partial cap. The larger grid was often slower at the smaller tuning size. Timing only the first kernel would miss that extra pass.
 
 ## Profiler evidence
 
@@ -48,11 +48,11 @@ The detail reports use the same release kernel source and explicit cache-flushed
 
 Sources: [R0](../../profiles/detail/reduce-r0-16777216.csv), [R1](../../profiles/detail/reduce-r1-16777216.csv), [R2](../../profiles/detail/reduce-r2-16777216.csv). The exported reports include all subsequent passes, not just these first-pass rows. No local spill requests were reported for these kernels.
 
-The barrier observations support the intended R0→R1 change. R2's low occupancy does not imply a bad result by itself: a bounded grid can still sustain useful streaming throughput. Its dominant long-scoreboard proportion and approximately input-sized DRAM reads are consistent with waiting on memory, while its improvement over R1 is modest for the large case. Stall proportions are observations, not percentages of total wall time saved.
+Barrier stalls fall sharply from R0 to R1. R2's dominant long-scoreboard stalls and approximately input-sized DRAM reads suggest memory waits; its improvement over R1 is modest for this large input. Stall proportions do not measure wall time saved.
 
 The small reports also show low utilization for the tiny grids; host submission and launch costs are important there. The compiled shared-address pattern is designed for contiguous accesses, but some aggregate bank/DRAM counters contain small nonzero or extra traffic on this active-display WDDM system. They are not used to assert exact algorithmic byte counts.
 
-## Transfer-inclusive result and limits
+## Including transfers
 
 For 16,777,216 elements, median-of-three process medians:
 
@@ -63,4 +63,5 @@ For 16,777,216 elements, median-of-three process medians:
 
 Parentheses are the range of process medians. The E2E NVTX trace records a 64 MiB H2D copy, two reduction kernels, and a 4-byte D2H copy on the same stream. H2D occupied about 2.50 ms in that instrumented trace, dwarfing the approximately 0.16 ms of kernel execution. Final latency comes from the unprofiled benchmark, not this trace.
 
-This version stops after the bounded sweep. A future small-input policy or larger hardware study could be useful, but the current evidence supports the stated baseline improvement and explains why transfer-inclusive gains are limited.
+See the [measurement setup and reproduction commands](../reproduction.md) for timing, cache policy, and hardware details.
+
