@@ -1,8 +1,8 @@
 # Fusion: a clear device gain can disappear end to end
 
-**Result:** At M=128, N=512, K=64, folding bias/ReLU into G2 improves the device operation from **10.76 to 7.75 µs (1.39×)** across three independent process medians. Transfer-inclusive medians are **81.40 versus 80.25 µs**, a small difference within the observed process variation. A kernel-only improvement is not presented as an equivalent application-level improvement.
+At M=128, N=512, K=64, folding bias/ReLU into G2 improves the device operation from **10.76 to 7.75 µs (1.39×)** across three independent process medians. Transfer-inclusive medians are **81.40 versus 80.25 µs**, a small difference within the observed process variation. Fusion removes one kernel launch and an intermediate read/write, but leaves the input and output transfers unchanged.
 
-## Controlled comparison
+## What changed
 
 All three paths compute `Y = ReLU(A*B + bias[col])` with the same inputs and FP32 contract:
 
@@ -10,7 +10,7 @@ All three paths compute `Y = ReLU(A*B + bias[col])` with the same inputs and FP3
 - Fused: the same G2 tile/accumulator loop, applying bias/ReLU before the final store.
 - Library: pedantic FP32 cuBLAS plus the same combined epilogue kernel.
 
-The comparison avoids an artificially weak three-kernel baseline. Fusion removes one launch and approximately `8*M*N` logical intermediate bytes. It can change register usage or scheduling, and it does not guarantee an equal reduction in DRAM traffic.
+Fusion removes one launch and approximately `8*M*N` logical intermediate bytes. It can change register usage or scheduling, and it does not guarantee an equal reduction in DRAM traffic.
 
 ## Unprofiled measurements
 
@@ -30,7 +30,7 @@ Each value is the median of three process medians, with 30 samples per process. 
 
 ![Fusion scopes](../figures/fusion.png)
 
-For the smallest case, the unfused/fused device process ranges are 10.65–11.26 / 7.72–7.95 µs. E2E ranges are 80.45–81.80 / 79.90–82.20 µs, which overlap. The larger two E2E medians slightly favor unfused in this collection despite faster fused device execution. Those negative results are preserved.
+For the smallest case, the unfused/fused device process ranges are 10.65–11.26 / 7.72–7.95 µs. E2E ranges are 80.45–81.80 / 79.90–82.20 µs, which overlap. The larger two E2E medians slightly favor unfused in this collection despite faster fused device execution.
 
 ## Evidence from counters and timelines
 
@@ -49,8 +49,9 @@ The marked Nsight Systems captures for 128×512×64 independently confirm:
 
 See the event extracts in [`profiles/summary.json`](../../profiles/summary.json). The traces contain instrumented timings and capture overhead; they are used to verify the operation sequence, not to replace the unprofiled numbers above.
 
-## Interpretation and stopping point
+## Why the gain shrinks
 
 The strongest relative device gain is at the smallest K, where the removed launch/epilogue is a larger fraction of the operation. For 1024³, GEMM dominates and the relative benefit shrinks. Moving inputs/output and synchronizing a single job costs enough on this system that the E2E effect becomes small.
 
-The library path is an appropriate unfused cuBLAS baseline, not a comparison with cuBLASLt's fused epilogues. Data-resident multi-layer pipelines, Tensor Cores, and asynchronous transfer overlap could change the application-level result; they are outside v1. The useful outcome here is a measured boundary on fusion's benefit, rather than a universal fusion-speedup claim.
+The library path uses cuBLAS plus a separate epilogue; cuBLASLt fusion is not tested. These E2E results apply to one job that transfers all inputs and outputs, so they do not establish the benefit in a pipeline that keeps data on the GPU. See the [measurement setup and reproduction commands](../reproduction.md) for the full timing scope.
+
